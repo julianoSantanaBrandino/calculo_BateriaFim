@@ -3,7 +3,7 @@ import pandas as pd
 from tkinter import Tk, Label, Entry, Button, StringVar, messagebox
 from tkinter.ttk import Combobox, Treeview
 
-class BatteryCalculatorApp:
+class mainApp:
     def __init__(self, root):
         self.root = root
         self.root.title("Calculadora Autonoia")
@@ -102,5 +102,5 @@ class BatteryCalculatorApp:
 
 if __name__ == '__main__':
     root = Tk()
-    app = BatteryCalculatorApp(root)
+    app = mainApp(root)
     root.mainloop()
