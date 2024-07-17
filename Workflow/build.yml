@@ -21,13 +21,13 @@ jobs:
           pip install pyinstaller pandas openpyxl
 
       - name: Build executable
-        run: pyinstaller --onefile --windowed BatteryCalculatorApp.py
+        run: pyinstaller --onefile --windowed main.py
 
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
           name: windows-executable
-          path: dist/BatteryCalculatorApp.exe
+          path: dist/main.exe
 
   build-macos:
     runs-on: macos-latest
@@ -47,10 +47,10 @@ jobs:
           pip install pyinstaller pandas openpyxl
 
       - name: Build executable
-        run: pyinstaller --onefile --windowed BatteryCalculatorApp.py
+        run: pyinstaller --onefile --windowed main.py
 
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
           name: macos-executable
-          path: dist/BatteryCalculatorApp
+          path: dist/main
